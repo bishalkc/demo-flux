@@ -1,4 +1,3 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -18,18 +17,16 @@ spec:
       interval: 3m
   values:
     namespace: demo-app
-
     #########---- Default values for Kubernetes object: Service ----#########
     service:
       type: "ClusterIP"
       port: 80
       targetPort: 8080
       protocol: "TCP"
-
     #########---- Default values for Kubernetes object: Deployment ----#########
     image:
       repository: "bishalkc/demo-app"
-      tag: "v11" # {"$imagepolicy": "flux-system:demo-app"}
+      tag: "bishalkc/demo-app:v1.0.3" # {"$imagepolicy": "flux-system:demo-app"}
     containers:
       securityContext:
         allowPrivilegeEscalation: false
@@ -49,7 +46,6 @@ spec:
         requests:
           cpu: 50m
           memory: "50Mi"
-
     readinessProbe:
       path: /health/readiness
       port: 8080
@@ -59,7 +55,6 @@ spec:
       timeoutSeconds: 5
       successThreshold: 2
       failureThreshold: 2
-
     livenessProbe:
       path: /health/liveness
       port: 8080
@@ -69,7 +64,6 @@ spec:
       timeoutSeconds: 5
       successThreshold: 1
       failureThreshold: 2
-
     #########---- Default values for Kubernetes object: HorizontalPodAutoscaler (hpa) ----#########
     hpa:
       enabled: true
@@ -91,7 +85,6 @@ spec:
             type: Pods
             value: 3
             periodSeconds: 60
-
     #########---- Default values for Kubernetes object: serviceAccount ----#########
     serviceAccount:
       # Specifies whether a service account should be created
@@ -100,35 +93,30 @@ spec:
       automount: true
       # aws_region: "us-east-1"
       # aws_account_id: "646431313"
-
     #########---- Default LB/Ingress ----#########
     ingress:
       enabled: false
       className: "alb"
       albName: "demo-app-dev"
-      annotations:
-        {}
-        # kubernetes.io/ingress.class: nginx
-        # kubernetes.io/tls-acme: "true"
+      annotations: {}
+      # kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: "true"
       hosts:
         - host: hello.test.com
           paths:
             - path: /
               pathType: ImplementationSpecific
       tls: []
-      inbound_cidrs:
-        {}
-        # enabled: false
-        # cidrs: ""
+      inbound_cidrs: {}
+      # enabled: false
+      # cidrs: ""
       alb:
         enabled: true
         # enabled: false
         # delete_protection: false
-      ssl:
-        {}
-        # enabled: false
-        # port: 443
-
+      ssl: {}
+      # enabled: false
+      # port: 443
     #########---- Default values app ----#########
     app:
       environment: dev
