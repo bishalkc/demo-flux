@@ -1,0 +1,52 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: demo-app-dev
+  namespace: flux-system
+spec:
+  interval: 3m
+  releaseName: demo-app-dev
+  targetNamespace: demo-app-dev
+  chart:
+    spec:
+      chart: ./helmchart/
+      sourceRef:
+        kind: GitRepository
+        name: demo-app
+        namespace: flux-system
+      interval: 3m
+  values:
+    namespace: demo-app-dev
+    generatecert:
+      enabled: true
+    hpa:
+      enabled: true
+      minReplicas: 3
+    # service:
+    #   name: demo-app-dev
+    # serviceAccount:
+    #   name: demo-app-dev-sa
+    image:
+      repository: "bishalkc/demo-app"
+      tag: "v11"
+    app:
+      environment: dev
+      port: 8080
+      project: "demo-app"
+      tenant: "DA"
+      framework: "demo"
+      cluster_name: "demo-cluster"
+      secrets:
+        manager:
+          enabled: true
+          name: "database-v4"
+          type: "aws"
+        ssm:
+          enabled: true
+          params:
+            - name
+            - environment
+            - framework
+            - api_key
+            - hash_key
