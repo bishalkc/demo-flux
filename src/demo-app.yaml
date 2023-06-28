@@ -12,3 +12,12 @@ spec:
     branch: main
   secretRef:
     name: git-https-credentials
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: demo-app
+  namespace: flux-system
+spec:
+  image: bishalkc/demo-app
+  interval: 1m0s
