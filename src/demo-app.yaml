@@ -34,7 +34,7 @@ metadata:
   namespace: flux-system
 spec:
   image: bishalkc/demo-app
-  interval: 1m0s
+  interval: 30s
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy

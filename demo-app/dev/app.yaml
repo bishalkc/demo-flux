@@ -4,7 +4,7 @@ metadata:
   name: demo-app
   namespace: flux-system
 spec:
-  interval: 3m
+  interval: 30s
   releaseName: demo-app
   targetNamespace: demo-app
   chart:
@@ -14,7 +14,7 @@ spec:
         kind: GitRepository
         name: demo-app
         namespace: flux-system
-      interval: 3m
+      interval: 30s
   values:
     namespace: demo-app
     #########---- Default values for Kubernetes object: Service ----#########
