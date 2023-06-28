@@ -8,6 +8,14 @@ spec:
   interval: 3m
   releaseName: demo-app-dev
   targetNamespace: demo-app-dev
+  chart:
+    spec:
+      chart: ./helmchart/
+      sourceRef:
+        kind: GitRepository
+        name: demo-app
+        namespace: flux-system
+      interval: 3m
   values:
     namespace: demo-app-dev
     generatecert:
