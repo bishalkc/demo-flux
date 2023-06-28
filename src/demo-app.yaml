@@ -1,17 +1,17 @@
-# ---
-# apiVersion: source.toolkit.fluxcd.io/v1
-# kind: GitRepository
-# metadata:
-#   name: demo-app
-#   namespace: flux-system
-# spec:
-#   suspend: false
-#   interval: 20s
-#   url: https://github.com/bishalkc/demo-app
-#   ref:
-#     branch: main
-#   secretRef:
-#     name: git-https-credentials
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: demo-app
+  namespace: flux-system
+spec:
+  suspend: false
+  interval: 20s
+  url: https://github.com/bishalkc/demo-app
+  ref:
+    branch: main
+  secretRef:
+    name: git-https-credentials
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
