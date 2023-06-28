@@ -95,7 +95,7 @@ spec:
       # aws_account_id: "646431313"
     #########---- Default LB/Ingress ----#########
     ingress:
-      enabled: false
+      enabled: true
       className: "alb"
       albName: "demo-app-dev"
       annotations: {}
