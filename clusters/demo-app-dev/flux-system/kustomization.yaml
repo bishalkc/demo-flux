@@ -6,4 +6,4 @@ resources:
 
   ## Demo APP
   - ../../../src/demo-app.yaml
-  - ../../../demo-app/dev/app.yaml
+  # - ../../../demo-app/dev/app.yaml
