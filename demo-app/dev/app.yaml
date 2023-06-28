@@ -2,12 +2,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: demo-app-dev
+  name: demo-app
   namespace: flux-system
 spec:
   interval: 3m
-  releaseName: demo-app-dev
-  targetNamespace: demo-app-dev
+  releaseName: demo-app
+  targetNamespace: demo-app
   chart:
     spec:
       chart: ./helmchart/
@@ -17,7 +17,7 @@ spec:
         namespace: flux-system
       interval: 3m
   values:
-    namespace: demo-app-dev
+    namespace: demo-app
     generatecert:
       enabled: true
     hpa:
