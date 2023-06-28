@@ -13,6 +13,20 @@ spec:
   secretRef:
     name: git-https-credentials
 ---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: demo-flux
+  namespace: flux-system
+spec:
+  suspend: false
+  interval: 20s
+  url: https://github.com/bishalkc/demo-flux
+  ref:
+    branch: main
+  secretRef:
+    name: demo-flux-https-credentials
+---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
@@ -40,10 +54,10 @@ metadata:
   name: demo-app
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 30s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: demo-flux
   git:
     checkout:
       ref:
