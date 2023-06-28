@@ -32,7 +32,7 @@ spec:
     name: demo-app
   policy:
     semver:
-      range: ">=1.0.0"
+      range: ">= 1.0.0"
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
