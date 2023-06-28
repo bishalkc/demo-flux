@@ -101,7 +101,7 @@ spec:
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
       hosts:
-        - host: hello.test.com
+        - host: "hello.test.com"
           paths:
             - path: /
               pathType: ImplementationSpecific
@@ -118,7 +118,7 @@ spec:
       # port: 443
     #########---- Default values app ----#########
     app:
-      environment: dev
+      environment: "dev"
       port: 8080
       project: "demo-app"
       framework: "demo"
