@@ -95,9 +95,8 @@ spec:
       # aws_account_id: "646431313"
     #########---- Default LB/Ingress ----#########
     ingress:
-      enabled: true
+      enabled: false
       className: "alb"
-      albName: "demo-app-dev"
       annotations: {}
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
