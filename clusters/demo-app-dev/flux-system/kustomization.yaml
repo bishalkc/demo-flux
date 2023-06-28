@@ -5,4 +5,4 @@ resources:
   - gotk-sync.yaml
 
   ## Demo APP
-  - ../../src/demo-app.yaml
+  - ../../../src/demo-app.yaml

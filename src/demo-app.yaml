@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: charts-repo
+  namespace: flux-system
+spec:
+  suspend: false
+  interval: 20s
+  url: https://github.com/bishalkc/demo-app
+  ref:
+    branch: main
+  secretRef:
+    name: git-https-credentials
