@@ -31,8 +31,8 @@ spec:
   imageRepositoryRef:
     name: demo-app
   policy:
-    numerical:
-      order: asc
+    semver:
+      range: ">=1.0.0"
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
