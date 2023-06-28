@@ -21,3 +21,21 @@ metadata:
 spec:
   image: bishalkc/demo-app
   interval: 1m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImageUpdateAutomation
+metadata:
+  name: demo-app
+  namespace: flux-system
+spec:
+  checkout:
+    branch: main
+    gitRepositoryRef:
+      name: demo-app
+  commit:
+    authorEmail: bishalkc@gmail.com
+    authorName: "Bishal KC"
+    messageTemplate: "update image"
+  interval: 1m0s
+  update:
+    strategy: Setters
