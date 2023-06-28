@@ -43,7 +43,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: demo-app
   git:
     checkout:
       ref:

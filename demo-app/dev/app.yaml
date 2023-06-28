@@ -105,6 +105,7 @@ spec:
     ingress:
       enabled: false
       className: "alb"
+      albName: "demo-app-dev"
       annotations:
         {}
         # kubernetes.io/ingress.class: nginx
