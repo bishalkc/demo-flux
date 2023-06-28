@@ -43,7 +43,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: demo-app
+    name: flux-system
   git:
     checkout:
       ref:
@@ -56,5 +56,5 @@ spec:
     push:
       branch: main
   update:
-    path: ./clusters/demo-app-dev
+    path: ./demo-app/dev/app.yaml
     strategy: Setters
