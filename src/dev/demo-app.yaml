@@ -9,7 +9,7 @@ spec:
   interval: 20s
   url: https://github.com/bishalkc/demo-app
   ref:
-    branch: main
+    branch: dev
   secretRef:
     name: git-https-credentials
 ---
@@ -23,7 +23,7 @@ spec:
   interval: 20s
   url: https://github.com/bishalkc/demo-flux
   ref:
-    branch: main
+    branch: dev
   secretRef:
     name: demo-flux-https-credentials
 ---
@@ -61,14 +61,14 @@ spec:
   git:
     checkout:
       ref:
-        branch: main
+        branch: dev
     commit:
       author:
         email: fluxcdbot@users.noreply.github.com
         name: fluxcdbot
       messageTemplate: "{{range .Updated.Images}}{{println .}}{{end}}"
     push:
-      branch: main
+      branch: dev
   update:
     path: ./demo-app/dev/app.yaml
     strategy: Setters
