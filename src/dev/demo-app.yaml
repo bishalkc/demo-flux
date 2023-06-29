@@ -23,7 +23,7 @@ spec:
   interval: 20s
   url: https://github.com/bishalkc/demo-flux
   ref:
-    branch: dev
+    branch: main
   secretRef:
     name: demo-flux-https-credentials
 ---
@@ -45,7 +45,8 @@ spec:
   imageRepositoryRef:
     name: demo-app
   filterTags:
-    pattern: "^dev-[a-f0-9]+"
+    pattern: "^dev-(?P<sha>[a-f0-9]+)"
+    extract: "$sha"
   policy:
     numerical:
       order: asc
