@@ -44,9 +44,11 @@ metadata:
 spec:
   imageRepositoryRef:
     name: demo-app
+  filterTags:
+    pattern: "^dev-[a-f0-9]+"
   policy:
-    semver:
-      range: ">= 1.0.0"
+    numerical:
+      order: asc
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
