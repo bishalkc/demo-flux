@@ -45,8 +45,8 @@ spec:
   imageRepositoryRef:
     name: demo-app
   filterTags:
-    pattern: "^dev-(?P<sha>[a-f0-9]+)"
-    extract: "$sha"
+    pattern: "^dev-[a-f0-9]+-(?P<ts>[0-9-]+)"
+    extract: "$ts"
   policy:
     alphabetical:
       order: asc
