@@ -126,7 +126,7 @@ spec:
       secrets:
         manager:
           enabled: true
-          name: "database-v5"
+          name: "database-v6"
           type: "aws"
         ssm:
           enabled: true
