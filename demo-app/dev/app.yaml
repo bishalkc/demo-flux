@@ -26,7 +26,7 @@ spec:
     #########---- Default values for Kubernetes object: Deployment ----#########
     image:
       repository: "bishalkc/demo-app"
-      tag: "v1.0.5" # {"$imagepolicy": "flux-system:demo-app:tag"}
+      tag: "dev-b106442" # {"$imagepolicy": "flux-system:demo-app:tag"}
     containers:
       securityContext:
         allowPrivilegeEscalation: false
