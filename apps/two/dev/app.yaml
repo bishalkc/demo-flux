@@ -1,12 +1,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: demo-app-two
+  name: demo-app-two # {project_name}-{app_name}
   namespace: flux-system
 spec:
   interval: 30s
-  releaseName: demo-app-two
-  targetNamespace: demo-app-two
+  releaseName: demo-app-two # {project_name}-{app_name}
+  targetNamespace: demo-app-two # {project_name}-{app_name}
   chart:
     spec:
       chart: ./helmchart/
@@ -19,7 +19,7 @@ spec:
     namespace: demo-app-two
     image:
       repository: "bishalkc/demo-app"
-      tag: "dev-6efd216-20230629-070557" # {"$imagepolicy": "flux-system:demo-app:tag"}
+      tag: "dev-7b7f3ef-20230630-112203" # {"$imagepolicy": "flux-system:demo-app:tag"}
     # #########---- Default values for Kubernetes object: Service ----#########
     # service:
     #   type: "ClusterIP"
