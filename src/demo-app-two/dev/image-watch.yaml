@@ -1,36 +1,8 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: demo-app
-  namespace: flux-system
-spec:
-  suspend: false
-  interval: 20s
-  url: https://github.com/bishalkc/demo-app
-  ref:
-    branch: dev ### APP CODE BRANCH
-  secretRef:
-    name: git-https-credentials
----
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: demo-flux
-  namespace: flux-system
-spec:
-  suspend: false
-  interval: 20s
-  url: https://github.com/bishalkc/demo-flux
-  ref:
-    branch: main ### DONT CHANGE THIS
-  secretRef:
-    name: demo-flux-https-credentials
----
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
-  name: demo-app
+  name: demo-app-two
   namespace: flux-system
 spec:
   image: bishalkc/demo-app
@@ -39,11 +11,11 @@ spec:
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
-  name: demo-app
+  name: demo-app-two
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: demo-app
+    name: demo-app-two
   filterTags:
     pattern: "^dev-[a-f0-9]+-(?P<ts>[0-9-]+)"
     extract: "$ts"
@@ -54,7 +26,7 @@ spec:
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
-  name: demo-app
+  name: demo-app-two
   namespace: flux-system
 spec:
   interval: 30s
@@ -73,5 +45,5 @@ spec:
     push:
       branch: main ### DONT CHANGE THIS
   update:
-    path: ./demo-app/dev/app.yaml
+    path: ./apps/demo-app-two/dev/app.yaml
     strategy: Setters

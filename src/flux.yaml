@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: demo-flux
+  namespace: flux-system
+spec:
+  suspend: false
+  interval: 20s
+  url: https://github.com/bishalkc/demo-flux
+  ref:
+    branch: main ### DONT CHANGE THIS
+  secretRef:
+    name: demo-flux-https-credentials

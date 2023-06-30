@@ -4,6 +4,15 @@ resources:
   - gotk-components.yaml
   - gotk-sync.yaml
 
-  ## Demo APP
-  - ../../../src/dev/demo-app.yaml
-  - ../../../demo-app/dev/app.yaml
+  ## Notification
+  - ./notifications/notify.yaml
+
+  ## Demo APP ONE
+  - ./src/demo-app-one/dev/src.yaml
+  - ./src/demo-app-one/dev/image-watch.yaml
+  - ./apps/demo-app-one/dev/app.yaml
+
+  ## Demo APP ONE
+  # - ./src/demo-app-two/dev/src.yaml
+  # - ./src/demo-app-two/dev/image-watch.yaml
+  # - ./apps/demo-app-two/dev/app.yaml
