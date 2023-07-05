@@ -123,7 +123,7 @@ spec:
       environment: "dev"
       port: 8080
       project: "demo-app"
-      framework: "demo"
+      framework: "python"
       # cluster_name: "demo-cluster"
     secrets:
       manager:
