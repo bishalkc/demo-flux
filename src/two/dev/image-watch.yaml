@@ -32,7 +32,7 @@ spec:
   interval: 30s
   sourceRef:
     kind: GitRepository
-    name: demo-flux
+    name: demo-app-two
   git:
     checkout:
       ref:
@@ -45,5 +45,5 @@ spec:
     push:
       branch: main ### DONT CHANGE THIS
   update:
-    path: ./apps/two/dev/app.yaml
+    path: ../../../apps/two/dev/app.yaml
     strategy: Setters
