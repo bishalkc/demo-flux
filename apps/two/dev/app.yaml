@@ -19,7 +19,7 @@ spec:
     namespace: demo-app-two
     image:
       repository: "bishalkc/demo-app"
-      tag: "dev-a5d10b4-20230701-010656" # {"$imagepolicy": "flux-system:demo-app:tag"}
+      tag: "dev-a5d10b4-20230701-010656" # {"$imagepolicy": "flux-system:demo-app-two:tag"}
     # #########---- Default values for Kubernetes object: Service ----#########
     # service:
     #   type: "ClusterIP"

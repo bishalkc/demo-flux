@@ -32,7 +32,7 @@ spec:
   interval: 30s
   sourceRef:
     kind: GitRepository
-    name: demo-app-two
+    name: demo-flux
   git:
     checkout:
       ref:
