@@ -135,6 +135,7 @@ spec:
           - password
           - host
           - dbname
+          - dbport
       ssm:
         enabled: true
         params:
@@ -143,3 +144,6 @@ spec:
           - framework
           - api_key
           - hash_key
+          - google_api_key
+          - apple_id
+          - cache_ttl

@@ -45,5 +45,5 @@ spec:
     push:
       branch: main ### DONT CHANGE THIS
   update:
-    path: ./apps/demo-app-two/dev/app.yaml
+    path: ./apps/two/dev/app.yaml
     strategy: Setters
