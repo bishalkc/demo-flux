@@ -5,12 +5,12 @@ resources:
   - gotk-sync.yaml
 
   ## Notification
-  - ./notifications/notify.yaml
+  - ../../../notifications/notify.yaml
 
   ## Demo APP ONE
-  - ./src/demo-app-one/dev/src.yaml
-  - ./src/demo-app-one/dev/image-watch.yaml
-  - ./apps/demo-app-one/dev/app.yaml
+  - ../../../src/demo-app-one/dev/src.yaml
+  - ../../../src/demo-app-one/dev/image-watch.yaml
+  - ../../../apps/demo-app-one/dev/app.yaml
 
   ## Demo APP ONE
   # - ./src/demo-app-two/dev/src.yaml
