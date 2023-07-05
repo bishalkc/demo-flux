@@ -19,7 +19,7 @@ spec:
     namespace: demo-app-two
     image:
       repository: "bishalkc/demo-app"
-      tag: "dev-7b7f3ef-20230630-112203" # {"$imagepolicy": "flux-system:demo-app:tag"}
+      tag: "dev-a5d10b4-20230701-010656" # {"$imagepolicy": "flux-system:demo-app:tag"}
     # #########---- Default values for Kubernetes object: Service ----#########
     # service:
     #   type: "ClusterIP"
@@ -124,26 +124,26 @@ spec:
       project: "demo-app"
       framework: "demo"
       # cluster_name: "demo-cluster"
-    secrets:
-      manager:
-        enabled: true
-        name: "secrets"
-        version: "v1"
-        type: "aws"
-        params:
-          - user
-          - password
-          - host
-          - dbname
-          - dbport
-      ssm:
-        enabled: true
-        params:
-          - name
-          - environment
-          - framework
-          - api_key
-          - hash_key
-          - google_api_key
-          - apple_id
-          - cache_ttl
+      secrets:
+        manager:
+          enabled: true
+          name: "secrets"
+          version: "v1"
+          type: "aws"
+          params:
+            - user
+            - password
+            - host
+            - dbname
+            - dbport
+        ssm:
+          enabled: true
+          params:
+            - name
+            - environment
+            - framework
+            - api_key
+            - hash_key
+            - google_api_key
+            - apple_id
+            - cache_ttl
