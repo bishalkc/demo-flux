@@ -20,6 +20,30 @@ spec:
     image:
       repository: "bishalkc/demo-app"
       tag: "dev-a5d10b4-20230701-010656" # {"$imagepolicy": "flux-system:demo-app-one:tag"}
+      ########---- Default LB/Ingress ----#########
+      ingress:
+        enabled: true
+        className: "alb"
+        annotations: {}
+        # kubernetes.io/ingress.class: nginx
+        # kubernetes.io/tls-acme: "true"
+        hosts:
+          - host: "demo-app-one.test.com"
+            paths:
+              - path: /
+                pathType: ImplementationSpecific
+        tls: []
+        inbound_cidrs: {}
+        # enabled: false
+        # cidrs: ""
+        alb:
+          enabled: true
+          # enabled: false
+          # delete_protection: false
+        ssl: {}
+        # enabled: false
+        # port: 443
+      ########---- Default values app ----#########
     app:
       name: "one"
       environment: "dev"
