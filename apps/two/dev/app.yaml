@@ -118,7 +118,7 @@ spec:
     #   # port: 443
     #########---- Default values app ----#########
     app:
-      name: "demo-app-two"
+      name: "two"
       environment: "dev"
       port: 8080
       project: "demo-app"
