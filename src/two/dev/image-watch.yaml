@@ -32,7 +32,7 @@ spec:
   interval: 30s
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: demo-flux
   git:
     checkout:
       ref:

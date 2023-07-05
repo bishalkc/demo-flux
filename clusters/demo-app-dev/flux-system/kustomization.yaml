@@ -4,6 +4,9 @@ resources:
   - gotk-components.yaml
   - gotk-sync.yaml
 
+  ## Image automation flux repo
+  - ../../../src/flux.yaml
+
   ## Notification
   - ../../../notifications/notify.yaml
 
