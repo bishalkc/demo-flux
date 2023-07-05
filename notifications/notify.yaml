@@ -18,7 +18,7 @@ metadata:
 spec:
   summary: "Demo Cluster"
   providerRef:
-    name: slack-notify-alert
+    name: slack-notify
   eventSeverity: info
   eventSources:
     - kind: GitRepository
