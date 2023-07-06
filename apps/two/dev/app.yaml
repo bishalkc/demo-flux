@@ -128,7 +128,7 @@ spec:
         manager:
           enabled: true
           name: "secrets"
-          version: "v2"
+          version: "v4"
           type: "aws"
           params:
             - user
