@@ -16,6 +16,6 @@ resources:
   - ../../../apps/one/dev/app.yaml
 
   ## Demo APP ONE
-  # - ../../../src/two/dev/src.yaml
-  # - ../../../src/two/dev/image-watch.yaml
-  # - ../../../apps/two/dev/app.yaml
+  - ../../../src/two/dev/src.yaml
+  - ../../../src/two/dev/image-watch.yaml
+  - ../../../apps/two/dev/app.yaml

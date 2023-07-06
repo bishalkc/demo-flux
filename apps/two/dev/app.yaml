@@ -94,17 +94,17 @@ spec:
     #   # aws_region: "us-east-1"
     #   # aws_account_id: "646431313"
     #########---- Default LB/Ingress ----#########
-    # ingress:
-    #   enabled: true
-    #   className: "alb"
-    #   annotations: {}
-    #   # kubernetes.io/ingress.class: nginx
-    #   # kubernetes.io/tls-acme: "true"
-    #   hosts:
-    #     - host: "hello.test.com"
-    #       paths:
-    #         - path: /
-    #           pathType: ImplementationSpecific
+    ingress:
+      enabled: true
+      className: "alb"
+      annotations: {}
+      # kubernetes.io/ingress.class: nginx
+      # kubernetes.io/tls-acme: "true"
+      hosts:
+        - host: "demo-app-two.test.com"
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
     #   tls: []
     #   inbound_cidrs: {}
     #   # enabled: false
