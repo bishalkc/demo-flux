@@ -19,7 +19,7 @@ spec:
     namespace: demo-app-one
     image:
       repository: "bishalkc/demo-app"
-      tag: "dev-b87e504-20230706-022618" # {"$imagepolicy": "flux-system:demo-app-one:tag"}
+      tag: "dev-05ab775-20230707-072835" # {"$imagepolicy": "flux-system:demo-app-one:tag"}
       ########---- Default LB/Ingress ----#########
     ingress:
       enabled: true
