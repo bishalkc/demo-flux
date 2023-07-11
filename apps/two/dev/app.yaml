@@ -128,7 +128,7 @@ spec:
         manager:
           enabled: true
           name: "secrets"
-          version: "v5"
+          version: "v6"
           type: "aws"
           params:
             - user
