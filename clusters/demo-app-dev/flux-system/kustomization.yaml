@@ -11,11 +11,11 @@ resources:
   - ../../../notifications/notify.yaml
 
   ## Demo APP ONE
-  # - ../../../src/one/dev/src.yaml
-  # - ../../../src/one/dev/image-watch.yaml
-  # - ../../../apps/one/dev/app.yaml
+  - ../../../src/one/dev/src.yaml
+  - ../../../src/one/dev/image-watch.yaml
+  - ../../../apps/one/dev/app.yaml
 
   ## Demo APP ONE
-  # - ../../../src/two/dev/src.yaml
-  # - ../../../src/two/dev/image-watch.yaml
-  # - ../../../apps/two/dev/app.yaml
+  - ../../../src/two/dev/src.yaml
+  - ../../../src/two/dev/image-watch.yaml
+  - ../../../apps/two/dev/app.yaml
